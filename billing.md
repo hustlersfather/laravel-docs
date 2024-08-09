@@ -1337,7 +1337,7 @@ You may also start a metered subscription via [Stripe Checkout](#checkout):
         'checkout' => $checkout,
     ]);
 
-You will also need to create a [meter](https://docs.stripe.com/billing/subscriptions/usage-based/recording-usage#configuring-meter) from your dashboard to track usage, remember store the associated event name and meter id, you will need them to report and retrieve usage.
+You will also need to create a [meter](https://docs.stripe.com/billing/subscriptions/usage-based/recording-usage#configuring-meter) from your dashboard to track usage, remember to store the associated event name and meter id, you will need them to report and retrieve usage.
 
 <a name="reporting-usage"></a>
 #### Reporting Usage
