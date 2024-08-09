@@ -1314,8 +1314,6 @@ Of course, you may also cancel the subscription entirely:
 
 [Metered billing](https://stripe.com/docs/billing/subscriptions/metered-billing) allows you to charge customers based on their product usage during a billing cycle. For example, you may charge customers based on the number of text messages or emails they send per month.
 
-You will also need to create a [meter](https://docs.stripe.com/billing/subscriptions/usage-based/recording-usage#configuring-meter) to track usage, store the associated event name and meter id, you will need them to report and retrieve usage.
-
 To start using metered billing, you will first need to create a new product in your Stripe dashboard with a metered price. Then, use the `meteredPrice` to add the metered price ID to a customer subscription:
 
     use Illuminate\Http\Request;
@@ -1338,6 +1336,8 @@ You may also start a metered subscription via [Stripe Checkout](#checkout):
     return view('your-checkout-view', [
         'checkout' => $checkout,
     ]);
+
+You will also need to create a [meter](https://docs.stripe.com/billing/subscriptions/usage-based/recording-usage#configuring-meter) from your dashboard to track usage, remember store the associated event name and meter id, you will need them to report and retrieve usage.
 
 <a name="reporting-usage"></a>
 #### Reporting Usage
